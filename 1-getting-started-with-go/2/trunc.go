@@ -1,10 +1,18 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"math"
+)
 
 func main() {
-	var number float32
-	fmt.Printf("What's the number? ")
-	fmt.Scan(&number)
-	fmt.Printf("%.0f \n", number)
+	var number float64
+	i := 0
+	for i < 2 {
+		fmt.Printf("What's the number? ")
+		fmt.Scan(&number)
+		fmt.Println(math.Trunc(number))
+
+		i++
+	}
 }
